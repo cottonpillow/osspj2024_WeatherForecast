@@ -95,3 +95,7 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+<img width="1440" alt="1" src="https://github.com/user-attachments/assets/d47a16d3-4aaa-4c73-ac16-adf461bc7304">
+
+<img width="1440" alt="2" src="https://github.com/user-attachments/assets/48b2827e-7393-4ade-bd3a-7aecb31545cb">
