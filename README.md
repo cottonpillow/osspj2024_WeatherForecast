@@ -61,12 +61,12 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 
 4. Add API key to the project (e.g., in a `.env` file or directly in the code).
 
-5. Run the application:
+5. To Debug mood on
    ```bash
-   flask run
-   ```
+     pip install flask requests
+         ```
 
-6. Open browser and navigate to `http://127.0.0.1:5000/`.
+8. Open browser and navigate to `http://127.0.0.1:5000/`.
 
 ## Usage
 
