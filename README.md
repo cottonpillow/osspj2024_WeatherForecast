@@ -68,7 +68,12 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 6. Run the application:
    ```bash
    flask run
-   ```8. Open browser and navigate to `http://127.0.0.1:5000/`.
+   ```
+  or 
+  ```bash
+   python app.py
+   ```
+7. Open browser and navigate to `http://127.0.0.1:5000/`.
 
 ## Usage
 
