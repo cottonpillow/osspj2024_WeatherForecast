@@ -88,13 +88,6 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 - **Hover Effects**: Subtle scaling and color changes enhance interactivity.
 - **Clean Layout**: Grid and flexbox layouts for intuitive organization of elements.
 
-## Future Improvements
-
-- Add interactive charts for weather trends.
-- Implement a geolocation feature to fetch weather based on the user's location.
-- Expand support for additional languages.
-- Optimize for mobile and tablet devices.
-
 ## Contributors
 
 - Shin Phone Pyae ( 신폰 )
