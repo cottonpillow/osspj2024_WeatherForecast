@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="sky-background">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
+    
+    <div class="weather-container">
+        <form method="POST" class="search-container">
+            <input 
+                type="text" 
+                name="city" 
+                class="search-input" 
+                placeholder="Enter city name" 
+                required
+            >
+            <button type="submit" class="search-button">
+                Search
+            </button>
+        </form>
+
+        {% if error %}
+            <div class="error-message">{{ error }}</div>
+        {% endif %}
+
+        {% if weather %}
+            <div class="weather-display">
+                <h2 class="city-name">
+                    {{ weather.name }}, {{ weather.sys.country }}
+                </h2>
+                
+                <div class="temperature">
+                    {{ weather.main.temp|round|int }}°C
+                </div>
+                
+                <p class="weather-description">
+                    {{ weather.weather[0].description }}
+                </p>
+                
+                <div class="weather-details">
+                    <div class="weather-detail">
+                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value">
+                            {{ weather.main.humidity }}%
+                        </span>
+                    </div>
+                    <div class="weather-detail">
+                        <span class="detail-label">Wind Speed</span>
+                        <span class="detail-value">
+                            {{ weather.wind.speed }} m/s
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hourly Forecast Section -->
+                {% if hourly_forecast %}
+                <div class="hourly-forecast-section">
+                    <h3>Hourly Forecast</h3>
+                    <div class="hourly-forecast-grid">
+                        {% for hour in hourly_forecast %}
+                        <div class="hourly-forecast-item">
+                            <p class="hourly-time">{{ hour.time }}</p>
+                            <p class="hourly-emoji">{{ hour.emoji }}</p>
+                            <p class="hourly-temp">{{ hour.temp }}°C</p>
+                            <p class="hourly-description">{{ hour.description }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- 5-Day Forecast Section -->
+                {% if five_day_forecast %}
+                <div class="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-grid">
+                        {% for day in five_day_forecast %}
+                        <div class="forecast-day">
+                            <p class="forecast-date">{{ day.day }}</p>
+                            <p class="forecast-temp">{{ day.low }}°C - {{ day.high }}°C</p>
+                            <p class="forecast-description">{{ day.emoji }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
