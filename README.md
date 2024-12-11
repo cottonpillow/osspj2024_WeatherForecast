@@ -17,6 +17,7 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 ## Technologies Used
 
 - **Python (Flask)**: For server-side logic and routing.
+- **Python libraries**: Handles data processing.
 - **HTML, CSS**: For structuring and styling the website.
 - **Jinja2**: For templating dynamic content.
 - **Weather API**: Retrieves real-time weather and forecast data from OpenWeatherMap.
@@ -56,16 +57,16 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
    pip install -r requirements.txt
    ```
 
-3. Obtain an API key from your preferred weather API provider (e.g., OpenWeatherMap).
+3. Obtain an API key from preferred weather API provider (e.g., OpenWeatherMap).
 
-4. Add your API key to the project (e.g., in a `.env` file or directly in the code).
+4. Add API key to the project (e.g., in a `.env` file or directly in the code).
 
 5. Run the application:
    ```bash
    flask run
    ```
 
-6. Open your browser and navigate to `http://127.0.0.1:5000/`.
+6. Open browser and navigate to `http://127.0.0.1:5000/`.
 
 ## Usage
 
@@ -89,7 +90,7 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 
 ## Contributors
 
-- **Your Name** - Developer and Designer
+- Shin Phone Pyae ( 신폰 )
 
 ## License
 
