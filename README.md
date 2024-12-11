@@ -64,7 +64,7 @@ A dynamic and visually appealing Weather Dashboard that provides current weather
 5. To Debug mood on
    ```bash
      pip install flask requests
-         ```
+    ```
 
 8. Open browser and navigate to `http://127.0.0.1:5000/`.
 
